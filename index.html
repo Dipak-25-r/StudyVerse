@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudyVerse - Social Learning Platform for GSEB Students">
+    <meta name="theme-color" content="#3b82f6">
+    <title>StudyVerse - Learn. Interact. Grow.</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%233b82f6'>S</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold">S</div>
+                <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">StudyVerse</span>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <select id="languageSelect" class="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                    <option value="gu">ગુજરાતી</option>
+                </select>
+                
+                <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 transition">
+                    <span class="text-xl">🌙</span>
+                </button>
+                
+                <button onclick="location.href='login.html'" class="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:shadow-lg transition">
+                    <span class="login-text">Login</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="mt-20 max-w-7xl mx-auto px-4 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent hero-title">Learn Smarter<br>Together</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 hero-subtitle">StudyVerse combines the best of social learning, AI assistance, and classroom management for GSEB students.</p>
+                
+                <div class="flex gap-4">
+                    <button onclick="location.href='login.html'" class="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:shadow-lg transition font-semibold">
+                        <span class="get-started-text">Get Started</span>
+                    </button>
+                    <button onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})" class="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition font-semibold">
+                        <span class="learn-more-text">Learn More</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl blur-3xl opacity-20"></div>
+                <div class="relative bg-white rounded-3xl p-8 shadow-2xl border border-gray-100">
+                    <div class="space-y-4">
+                        <div class="h-24 bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl animate-pulse"></div>
+                        <div class="h-4 bg-gray-200 rounded animate-pulse"></div>
+                        <div class="h-4 bg-gray-200 rounded w-5/6 animate-pulse"></div>
+                        <div class="flex gap-2 pt-4">
+                            <div class="flex-1 h-10 bg-blue-100 rounded animate-pulse"></div>
+                            <div class="flex-1 h-10 bg-purple-100 rounded animate-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="max-w-7xl mx-auto px-4 py-20">
+        <h2 class="text-4xl font-bold text-center mb-4 features-title">Powerful Features</h2>
+        <p class="text-center text-gray-600 mb-12 features-subtitle">Everything you need to excel in your studies</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Feature Cards -->
+            <div class="bg-white/70 backdrop-blur rounded-2xl p-6 hover:shadow-lg transition border border-gray-100 hover:border-blue-200">
+                <div class="text-4xl mb-4">🤖</div>
+                <h3 class="text-xl font-bold mb-2 ai-feature-title">AI Study Assistant</h3>
+                <p class="text-gray-600 ai-feature-desc">Ask any question and get instant answers in your preferred language using advanced AI.</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur rounded-2xl p-6 hover:shadow-lg transition border border-gray-100 hover:border-blue-200">
+                <div class="text-4xl mb-4">👥</div>
+                <h3 class="text-xl font-bold mb-2 groups-feature-title">Study Groups</h3>
+                <p class="text-gray-600 groups-feature-desc">Collaborate with classmates in real-time. Share notes, ask doubts, and grow together.</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur rounded-2xl p-6 hover:shadow-lg transition border border-gray-100 hover:border-blue-200">
+                <div class="text-4xl mb-4">📊</div>
+                <h3 class="text-xl font-bold mb-2 analytics-feature-title">Progress Analytics</h3>
+                <p class="text-gray-600 analytics-feature-desc">Track your learning journey with detailed stats, weak topics, and improvement areas.</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur rounded-2xl p-6 hover:shadow-lg transition border border-gray-100 hover:border-blue-200">
+                <div class="text-4xl mb-4">📝</div>
+                <h3 class="text-xl font-bold mb-2 quiz-feature-title">Smart Quizzes</h3>
+                <p class="text-gray-600 quiz-feature-desc">Test yourself with AI-generated quizzes and compete on the leaderboard.</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur rounded-2xl p-6 hover:shadow-lg transition border border-gray-100 hover:border-blue-200">
+                <div class="text-4xl mb-4">🏆</div>
+                <h3 class="text-xl font-bold mb-2 badge-feature-title">Badges & Rewards</h3>
+                <p class="text-gray-600 badge-feature-desc">Earn badges for achievements and maintain your daily learning streak.</p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur rounded-2xl p-6 hover:shadow-lg transition border border-gray-100 hover:border-blue-200">
+                <div class="text-4xl mb-4">🌍</div>
+                <h3 class="text-xl font-bold mb-2 language-feature-title">Multi-Language</h3>
+                <p class="text-gray-600 language-feature-desc">Learn in English, Hindi, or Gujarati. Content in all major languages supported.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="max-w-7xl mx-auto px-4 py-20">
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white">
+            <h2 class="text-4xl font-bold mb-4 cta-title">Ready to Transform Your Learning?</h2>
+            <p class="text-lg mb-8 cta-subtitle">Join thousands of students already using StudyVerse to ace their GSEB exams.</p>
+            <button onclick="location.href='login.html'" class="px-8 py-4 bg-white text-blue-600 rounded-lg hover:shadow-lg transition font-bold text-lg">
+                <span class="start-journey-text">Start Your Journey</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">S</div>
+                        <span class="font-bold">StudyVerse</span>
+                    </div>
+                    <p class="text-gray-400 text-sm footer-tagline">Social learning platform for GSEB students.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 product-link">Product</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition features-link">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition pricing-link">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 company-link">Company</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition about-link">About</a></li>
+                        <li><a href="#" class="hover:text-white transition contact-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 legal-link">Legal</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition privacy-link">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white transition terms-link">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 StudyVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+</html>
